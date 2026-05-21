@@ -53,16 +53,30 @@ This project focuses on mastering:
 ## 📂 Project Structure
 
 ```txt
-src/
-│── assets/              # Images, SVGs, icons
-│── components/          # Reusable UI components
-│   ├── Navbar.jsx
-│   ├── Footer.jsx
-│   ├── Sidebar.jsx
-│   ├── Card.jsx
-│   └── Button.jsx
-│
-│── App.jsx              # Root component
-│── App.css
-│── index.css
-│── main.jsx
+sfigma-assignment/
+├── public/
+│   └── favicon.ico         # Custom favicon from design assets
+├── src/
+│   ├── assets/             # Exported SVGs, logos, and static illustrations
+│   │   ├── logo.svg
+│   │   └── avatar.png
+│   ├── components/         # Reusable presentation & structural components
+│   │   ├── common/         # Low-level UI atoms (Buttons, Inputs, Badges)
+│   │   │   ├── Button.jsx
+│   │   │   ├── Badge.jsx
+│   │   │   └── SearchBar.jsx
+│   │   ├── layout/         # Frame components (Navigation, Shells)
+│   │   │   ├── Header.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── LayoutWrapper.jsx
+│   │   └── dashboard/      # Specific component organisms
+│   │       ├── AnalyticsCard.jsx
+│   │       └── DataTable.jsx
+│   ├── hooks/              # Custom React hooks (e.g., useWindowSize, useFetch)
+│   ├── utils/              # Helper functions (date formatters, currency helpers)
+│   ├── App.jsx             # Base component assembling layout & state
+│   ├── index.css           # Global stylesheets, base tailwind directives
+│   └── main.jsx            # React root mount entrypoint
+├── tailwind.config.js      # Tailwind UI design tokens overrides
+├── package.json            # Scripts and metadata
+└── README.md               # Project documentation
