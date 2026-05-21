@@ -53,7 +53,7 @@ This project focuses on mastering:
 ## 📂 Project Structure
 
 ```txt
-sfigma-assignment/
+figma-assignment/
 ├── public/
 │   └── favicon.ico         # Custom favicon from design assets
 ├── src/
