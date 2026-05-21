@@ -1,82 +1,47 @@
-# Figma to React Web Application
+# Figma Assignment — Review Your Details
 
-A fully responsive and pixel-perfect React application built by converting a high-fidelity Figma UI design into a modern web application using React JS.
+Pixel-perfect React implementation of the [Figma Assignment design](https://www.figma.com/design/9d9gdInqx8rh5dpSN9NRro/Assignment?node-id=0-3).
 
-## 📌 Project Objective
+## Stack
 
-The primary objective of this project is to convert a high-fidelity Figma user interface design into a **fully functional, responsive, and pixel-perfect web application** using React JS.
+- React 18 + Vite
+- Tailwind CSS
+- Inter (Google Fonts)
 
-This project focuses on mastering:
+## Getting started
 
-- Translating Figma layouts, typography, spacing, and colors into code.
-- Building reusable and modular React components.
-- Implementing responsive UI for desktop, tablet, and mobile devices.
-- Managing state for interactive elements.
-- Organizing scalable project architecture for production-ready deployment.
+```bash
+cd figma-assignment
+npm install
+npm run dev
+```
 
----
+## Responsive breakpoints
 
-## 🚀 Features
+| Range | Tailwind | Layout behavior |
+|-------|----------|-----------------|
+| **Mobile** 320–479px | base | Stacked nav: search on top, icon-only actions, expandable menu |
+| **Mobile+** 480–767px | `sm:` | Single-row nav with full button labels |
+| **Tablet** 768–1023px | `md:` | Figma logo tab + search + actions in 71px bar |
+| **Desktop** 1024px+ | `lg:` | Two-column main grid (billing + sidebar), 480px search width |
 
-- ✅ Pixel-perfect UI implementation from Figma
-- ✅ Fully responsive layout (Mobile, Tablet, Desktop)
-- ✅ Reusable component-based architecture
-- ✅ Clean folder structure and maintainable code
-- ✅ Interactive UI states using React Hooks
-- ✅ Modern development setup with Vite
-- ✅ Optimized for GitHub portfolio showcase
+### Testing in DevTools
 
----
+1. Open the app and press `F12` → toggle device toolbar.
+2. Test widths: **320**, **375**, **480**, **768**, **1024**, **1280**.
+3. Tab through interactive elements and verify **focus rings** (buttons, inputs, links, coupon radios).
+4. Hover and click buttons, nav menu, coupon options, and form fields.
 
-## 🛠️ Tech Stack
+## Interactive states
 
-### Frontend
-- **React JS**
-- **Vite**
-- **JavaScript (ES6+)**
+- **Buttons:** hover brightness, active scale + brightness, `focus-visible` ring
+- **Search / form inputs:** hover border, focus ring + border
+- **Links:** hover/active color transitions
+- **Coupons:** hover border, focus-within ring, selected border state
 
-### Styling
-- **Tailwind CSS** *(Recommended)* / CSS Modules
-- Responsive Design Principles
+## Build
 
-### Libraries
-- **lucide-react** / **react-icons** for icons
-- **Google Fonts** for typography matching
-
-### Development Tools
-- **Node.js (v18+)**
-- **npm / yarn / pnpm**
-- **Visual Studio Code**
-
----
-
-## 📂 Project Structure
-
-```txt
-figma-assignment/
-├── public/
-│   └── favicon.ico         # Custom favicon from design assets
-├── src/
-│   ├── assets/             # Exported SVGs, logos, and static illustrations
-│   │   ├── logo.svg
-│   │   └── avatar.png
-│   ├── components/         # Reusable presentation & structural components
-│   │   ├── common/         # Low-level UI atoms (Buttons, Inputs, Badges)
-│   │   │   ├── Button.jsx
-│   │   │   ├── Badge.jsx
-│   │   │   └── SearchBar.jsx
-│   │   ├── layout/         # Frame components (Navigation, Shells)
-│   │   │   ├── Header.jsx
-│   │   │   ├── Sidebar.jsx
-│   │   │   └── LayoutWrapper.jsx
-│   │   └── dashboard/      # Specific component organisms
-│   │       ├── AnalyticsCard.jsx
-│   │       └── DataTable.jsx
-│   ├── hooks/              # Custom React hooks (e.g., useWindowSize, useFetch)
-│   ├── utils/              # Helper functions (date formatters, currency helpers)
-│   ├── App.jsx             # Base component assembling layout & state
-│   ├── index.css           # Global stylesheets, base tailwind directives
-│   └── main.jsx            # React root mount entrypoint
-├── tailwind.config.js      # Tailwind UI design tokens overrides
-├── package.json            # Scripts and metadata
-└── README.md               # Project documentation
+```bash
+npm run build
+npm run preview
+```

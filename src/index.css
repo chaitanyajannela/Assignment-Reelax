@@ -9,6 +9,10 @@
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html,
   body,
   #root {
@@ -20,5 +24,30 @@
     font-family: Inter, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .interactive-focus {
+    @apply outline-none transition-colors duration-150 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .nav-input {
+    @apply h-10 w-full rounded-nav border border-search bg-white py-2 pl-4 pr-11 text-sm leading-5 text-heading placeholder:text-muted;
+    @apply hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 active:border-primary;
+  }
+
+  .coupon-option {
+    @apply flex cursor-pointer items-center justify-between rounded-input border bg-white p-3 transition-colors duration-150;
+    @apply hover:border-primary/60 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15;
+    @apply active:bg-primary/[0.03];
+  }
+
+  .coupon-option-selected {
+    @apply border-primary;
+  }
+
+  .coupon-option-default {
+    @apply border-border-light;
   }
 }

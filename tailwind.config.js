@@ -2,9 +2,20 @@
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
+    screens: {
+      xs: '320px',
+      sm: '480px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       colors: {
         page: '#f2f2f2',
+        nav: '#f8f9fb',
+        upgrade: '#f2a735',
+        campaign: '#3b82f6',
+        search: 'rgba(67, 136, 255, 0.3)',
         primary: '#1977f2',
         'primary-border': 'rgba(67, 136, 255, 0.3)',
         'primary-bg': 'rgba(67, 120, 255, 0.05)',
@@ -33,13 +44,20 @@ export default {
       borderRadius: {
         card: '10px',
         input: '4px',
+        nav: '6px',
         pill: '24px',
+        'logo-tab': '12px',
       },
       boxShadow: {
         card: '0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1)',
+        nav: '0 1px 0 0 rgba(0, 0, 0, 0.04)',
       },
       maxWidth: {
         content: '1120px',
+        shell: '1280px',
+      },
+      height: {
+        nav: '71px',
       },
     },
   },
